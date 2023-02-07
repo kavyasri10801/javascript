@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<script>
+var num=153,digit=0,res,sum=0, power=0;
+var temp=num;
+while(num!=0)
+{
+num=parseInt(num/10);
+digit++;
+}
+num=temp;
+while(num!=0)
+{
+res=num%10
+power+=Math.pow(res,digit);
+num=parseInt(num/10);
+}
+if(temp==power)
+{
+document.write(temp+"is an armstrong");
+
+}
+else
+{
+document.write(temp+"is not an armstrong");
+}
+</script>
+</html>

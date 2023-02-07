@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var a=parseInt(prompt("enter first value"));
+var b=parseInt(prompt("enter second value"));
+var option=parseInt(prompt("enter choice of operation"));
+var res;
+switch(option)
+  {
+  case 1:res=addition(a,b);
+     break;
+  case 2:res=multiplication(a,b);
+     break;
+   case 3:res=substraction(a,b);
+     break;
+   default:res="invalid";
+
+   }
+
+function addition(a,b){return a+b;}
+function multiplication(a,b){return a*b;}
+function substraction(a,b){return a-b;}
+document.write("result is"+res);
+</script>
+</body>
+</html>
