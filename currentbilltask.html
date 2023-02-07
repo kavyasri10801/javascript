@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #mn{
+        border:none;
+        border-bottom:1px solid gray;
+        outline:none;
+         
+    }
+    #nu{
+        border:none;
+        border-bottom:1px solid gray;
+        outline:none;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>TSSPDCL</h1>
+  <label>Meter number</label>
+  <input type="text" id="mn"><br><br>
+ <label>units</label>
+ <input type="number" id="nu"><br><br>
+ <label id="">City</label>
+ <select id="city">
+    <option>select city</option>
+    <option value="1">hyd</option>
+    <option value="2">bnglr</option>
+ </select><br><br>
+ <label>B.type</label>
+ <select id="B.type">
+    <option>city type</option>
+    <option value="3">commercial</option>
+     <option value="4">Non-commercial</option>
+ </select>
+ <h3>Total amount</h3>
+ <button>print</button><br><br>
+  <button onclick="task()">Calculate</button>
+ <label for="" id="result"></label>
+    <script>
+     function  task()
+     {
+      var a=document.getElementById("city").value;
+      var b=document.getElementById("B.type").value;
+      var c=document.getElementById("nu").value;
+          if(a==1){
+            if(b==3){
+                d=parseInt(c*12);
+                g=parseInt(d*0.6);
+                e=parseInt(d+g);
+                document.getElementById("result").innerHTML=e;
+            }
+            else{
+                d=parseInt(c*12);
+                g=parseInt(d*0.5);
+                e=parseInt(d+g);
+                document.getElementById("result").innerHTML=e;
+            }
+            
+            }
+            else{
+              if(b==3){
+                d=parseInt(c*12);
+                g=parseInt(d*0.6);
+                e=parseInt(d+g);
+                document.getElementById("result").innerHTML=e;
+            }
+              else{
+                d=parseInt(c*12);
+                g=parseInt(d*0.6);
+                e=parseInt(d+g);
+                document.getElementById("result").innerHTML=e;
+            }
+            
+            }
+          }
+     
+    
+   
+
+
+
+
+    </script>
+</body>
+</html>
