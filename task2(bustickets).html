@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    #cont{
+        margin-left: 300px;
+        border: 2px solid black;
+        height: 320px;
+        width:400px;
+        background-color: rgb(148, 134, 134);
+        color:white;
+        border-radius: 50px;
+    }
+    .btn1{
+        background-color:green;
+        border-radius: 150px;
+    }
+    .btn2{
+        background-color:rgb(223, 107, 107);
+        border-radius: 150px;
+    }
+    body{
+        background-image: url("https://www.kotak.com/content/dam/Kotak/digital-banking/insta-services/kaymall/1440X400-Bus.jpg");
+         background-size: cover;
+    }
+    
+   </style>
+</head>
+<body>
+    <div align="center" id="cont">
+        <h1>TICKETS</h1>
+        <br><br>
+        <label>User Name</label>
+        <input type="text" id="username"><br><br>
+        <label>Number of tickets</label>
+        <input type="text" id="nof"><br><br>
+    
+        <label>destination</label>
+        <select id="desti">
+            <option value="1000">thirupathi</option>
+            <option value="800">medaram</option>
+            <option value="500">srishailam</option>
+        </select>
+        <br><br>
+        <button onclick="tmt()" class="btn1" >submit </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn2">cancel</button><br><br>
+       <label for="" id="tmt"></label>
+    </div>
+        <script>
+             function tmt(){
+             var username= document.getElementById("username").value;
+             var desti=parseInt(document.getElementById("desti").value);
+             var km=parseInt(desti*5)
+             var nof=parseInt(document.getElementById("nof").value);
+             var tmt=parseInt(km*nof)
+            var gst=18/100
+             var total=tmt*gst;
+             var totalamount=parseInt(tmt+total);
+             console.log(totalamount)
+             document.getElementById("tmt").innerHTML=username+" your ticket cost is"+totalamount;
+                }
+        </script>
+
+
+
+    </form>
+</body>
+</html>

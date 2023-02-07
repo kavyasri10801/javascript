@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+     #cont{
+        border: 2px solid black;
+        height: 300px;
+        width:450px;
+        margin-left: 450px;
+    }
+     </style>
+</head>
+<body id="cont">
+    <div align="center" >
+    <h1>LOGIN TO DRF</h1><br>
+    <label><b>User name*</b></label><br>
+    <input type="text" pattern="[a-z]{5}" title="pls enter 5 alphabets" id="usr"><br>
+    
+    <label><b>show Password*</b></label><br>
+    <input type="password" pattern=".{7}" title="pls enter 7 alphabets" id="pwd">
+     <button onclick="show()"><i class="fa fa-eye"></i></button><br><br>
+     <button>cancel</button>
+       <button  id="statement" onclick="task()">login </button>
+    
+    </div>
+</body>
+<script>
+    function show(){
+      var pwd=document.getElementById("pwd");
+       if(pwd.type=="password"){
+        pwd.type="text"
+       }
+       else 
+       {
+        pwd.type="password"
+       }
+ 
+    function task(){
+    var s=document.getElementById("pwd").value;
+    var ss=document.getElementById("usr").value;
+    var user=s.slice(0,3);
+    var usrnm=user+"1234";
+    if(s==usrnm){
+        document.getElementById("statement").innerHTML="you are lagged in successfully!";
+    }
+    else if(s!=usrnm){
+        document.getElementById("statement").innerHTML="coundn't log in! pls";
+    }
+    }
+}  
+</script>
+</html>
